@@ -18,7 +18,7 @@ class MessagesController < ApplicationController
         # message.save
         chatroom = message.chatroom
         user = message.user
-        ChatroomChannel.broadcast_to(chatroom, { message: "whatever WE WANT"})
+        ChatroomChannel.broadcast_to chatroom, MessageSerializer.new(message)
          render json: message
       else
         render json: {error: 'Could not create that message'}, status: 422
