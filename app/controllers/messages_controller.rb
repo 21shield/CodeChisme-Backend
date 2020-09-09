@@ -24,4 +24,6 @@ class MessagesController < ApplicationController
         render json: {error: 'Could not create that message'}, status: 422
       end
     end
+
+  
 end

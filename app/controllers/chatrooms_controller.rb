@@ -16,5 +16,12 @@ class ChatroomsController < ApplicationController
       render json: @chatroom
     end
 
+    def destroy
+    
+      chatroom = Chatroom.find_by(id: params[:id])
+      chatroom.destroy()
+      render json: chatroom
+    end
+
 
 end
