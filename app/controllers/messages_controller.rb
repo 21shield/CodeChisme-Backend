@@ -17,7 +17,7 @@ class MessagesController < ApplicationController
       if message.save
         # message.save
         chatroom = message.chatroom
-        user = message.user
+        # user = message.user
         ChatroomChannel.broadcast_to chatroom, MessageSerializer.new(message)
          render json: message
       else

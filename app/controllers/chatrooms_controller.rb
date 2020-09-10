@@ -12,8 +12,16 @@ class ChatroomsController < ApplicationController
     
     
     def create 
-      @chatroom = Chatroom.create(title: params[:title], amtPeople: params[:amtPeople])
-      render json: @chatroom
+      chatroom = Chatroom.create(title: params[:title], amtPeople: params[:amtPeople])
+      if chatroom.save
+        users = chatroom.users
+
+        UsersChatroomsChannel.broadcast_to users, ChatroomSerializer.new(chatroom)
+         render json: chatroom
+      else
+        render json: {error: 'Could not create that message'}, status: 422
+      end
+
     end
 
     def destroy
