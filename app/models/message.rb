@@ -6,4 +6,10 @@ class Message < ApplicationRecord
   def username
     self.user.username
   end
+
+  def date 
+    self.created_at.strftime("%I:%M%p")
+  end
+
 end
+
