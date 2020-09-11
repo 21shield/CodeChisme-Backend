@@ -6,6 +6,7 @@ def create
         name: params["user"]["name"],
         username: params["user"]["username"],
         email: params["user"]["email"],
+        image: params["user"]["image"],
         password: params["user"]["password"],
         password_confirmation: params["user"]["password_confirmation"]
     )
