@@ -1,7 +1,7 @@
 class RegistrationsController < ApplicationController
   
     def create 
-      byebug
+      # byebug
       image_url = Cloudinary::Uploader.upload(params[:image])
       
         user = User.create!(
