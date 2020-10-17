@@ -12,6 +12,7 @@ class ChatroomsController < ApplicationController
     
     
     def create 
+      # byebug
       chatroom = Chatroom.create(title: params[:title], amtPeople: params[:amtPeople])
       if chatroom.save
         users = chatroom.users
