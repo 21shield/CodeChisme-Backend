@@ -3,7 +3,7 @@
 
 # Code Chisme Backend
 
-A social platform that facilitates communication among developers and the programming community alike.\
+A social platform that facilitates communication among developers and the programming community alike.
 
 The frontend can be found [here](https://github.com/barbarabontempo/CodeChisme-frontend)
 
