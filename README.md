@@ -1,7 +1,7 @@
 
 ![code chisme](./images/CodeChisme.png)
 
-#Code Chisme Backend
+# Code Chisme Backend
 
 A social platform that facilitates communication among developers and the programming community alike.\
 
